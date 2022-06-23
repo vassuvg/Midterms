@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author sivagamasrinivasan
  * 
  */
+import java.util.*;
 public class ArithmeticBase 
 {
  public double x,y;
@@ -20,16 +21,16 @@ public class ArithmeticBase
         {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        char s = sc. next().charAt(0);
+        switch(s)
         {
-            case "PLUS":
+            case '+' :
                 return x + y;
-            case "MINUS":
+            case '-':
                 return x - y;
-            case "TIMES":
+            case '*':
                 return x * y;
-            case "DIVIDE":
+            case '/':
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
